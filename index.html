@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0918">
+
+  <meta
+    name="description"
+    content="Four months of love, memories, and a beautiful story that continues."
+  >
+
+  <title>Our Story | Four Months of Love ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Background decorations -->
+  <div id="stars" aria-hidden="true"></div>
+  <div id="hearts" aria-hidden="true"></div>
+
+  <!-- Background music -->
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="assets/music.mp3.m4a" type="audio/mp4">
+    Your browser does not support audio playback.
+  </audio>
+
+  <button
+    id="musicButton"
+    class="music-button"
+    type="button"
+    aria-label="Pause background music"
+    hidden
+  >
+    ♫
+  </button>
+
+  <main>
+
+    <!-- CHAPTER 1: INTRODUCTION -->
+
+    <section id="intro" class="scene active">
+      <div class="scene-content">
+
+        <p class="eyebrow">A LITTLE STORY ABOUT US</p>
+
+        <h1>Our Story <span>♡</span></h1>
+
+        <p class="romantic-text">
+          Some stories begin with a simple hello.
+          Ours became something I never want to lose.
+        </p>
+
+        <p class="dedication">FOR MY BEAUTIFUL BABY</p>
+
+        <p class="romantic-text">
+          Four months.
+          Two hearts.
+          One beautiful journey.
+        </p>
+
+        <button
+          type="button"
+          class="primary-button"
+          data-next="distance"
+        >
+          Begin Our Story ♡
+        </button>
+
+      </div>
+    </section>
+
+    <!-- CHAPTER 2: THE DISTANCE -->
+
+    <section id="distance" class="scene">
+      <div class="scene-content">
+
+        <p class="eyebrow">CHAPTER ONE</p>
+        <h2>Two Hearts, Miles Apart</h2>
+
+        <p class="romantic-text">
+          You were in Canada.
+          I was in Mexico.
+          And somehow, across all those miles,
+          we found each other.
+        </p>
+
+        <div class="photo-frame map-frame">
+          <img
+            src="assets/distancia.jpg"
+            alt="Our Widgetable characters far apart"
+            loading="lazy"
+          >
+        </div>
+
+        <p class="romantic-text">
+          Even when we couldn't hold hands,
+          we were finding ways to feel close.
+        </p>
+
+        <button
+          type="button"
+          class="primary-button"
+          data-next="closer"
+        >
+          But Then... ♡
+        </button>
+
+      </div>
+    </section>
+
+    <!-- CHAPTER 3: TOGETHER -->
+
+    <section id="closer" class="scene">
+      <div class="scene-content">
+
+        <p class="eyebrow">CHAPTER TWO</p>
+        <h2>The Distance Disappeared</h2>
+
+        <p class="romantic-text">
+          Then came the moment we had been waiting for.
+          You came to Mexico.
+          Suddenly, the miles between us
+          didn't feel impossible anymore.
+        </p>
+
+        <div class="photo-frame map-frame">
+          <img
+            src="assets/cerca.jpg"
+            alt="Our Widgetable characters together in Mexico"
+            loading="lazy"
+          >
+        </div>
+
+        <p class="romantic-text">
+          We weren't just looking at each other
+          through a screen anymore.
+          We were finally in the same place.
+        </p>
+
+        <button
+          type="button"
+          class="primary-button"
+          data-next="firstHug"
+        >
+          Our First Hug ♡
+        </button>
+
+      </div>
+    </section>
+
+    <!-- CHAPTER 4: FIRST HUG -->
+
+    <section id="firstHug" class="scene">
+      <div class="scene-content">
+
+        <p class="eyebrow">CHAPTER THREE</p>
+        <h2>The Moment I Held You</h2>
+
+        <p class="romantic-text">
+          I had imagined this moment so many times.
+          And then, suddenly, you were right there.
+        </p>
+
+        <div
+          class="photo-frame hug-frame surprise-frame"
+          id="hugSurprise"
+        >
+
+          <img
+            src="assets/primer-abrazo.jpg"
+            alt="Our first embrace at the airport"
+            id="hugPhoto"
+            class="hidden-memory"
+            loading="lazy"
+          >
+
+          <div id="hugOverlay" class="hug-overlay">
+
+            <span class="hug-symbol" aria-hidden="true">
+              🦋
+            </span>
+
+            <p>The moment I had been dreaming of...</p>
+
+            <button
+              type="button"
+              id="revealHug"
+              class="primary-button"
+            >
+              Reveal Our First Hug ♡
+            </button>
+
+          </div>
+        </div>
+
+        <p id="hugMessage" class="hug-message" hidden>
+          The world felt different the moment I held you.
+          After all those miles, you were finally here.
+          And for a little while,
+          distance was just a memory.
+        </p>
+
+        <button
+          type="button"
+          class="primary-button"
+          data-next="memories"
+        >
+          The Memories We Made ♡
+        </button>
+
+      </div>
+    </section>
+
+    <!-- CHAPTER 5: PHOTO ALBUM -->
+
+    <section id="memories" class="scene">
+      <div class="scene-content">
+
+        <p class="eyebrow">CHAPTER FOUR</p>
+        <h2>Little Moments, Big Feelings</h2>
+
+        <p class="romantic-text">
+          It wasn't only about the places we went.
+          It was about being there with you.
+          Every smile, every laugh,
+          every moment together.
+        </p>
+
+        <div
+          id="memoryGallery"
+          class="memory-gallery"
+          aria-label="Our photo memories"
+        ></div>
+
+        <p
+          id="memoryCaption"
+          class="memory-caption"
+          aria-live="polite"
+        >
+          Every picture holds a piece of our story. ♡
+        </p>
+
+        <p id="memoryCounter" class="memory-counter">
+          1 / 17
+        </p>
+
+        <div class="gallery-controls">
+
+          <button
+            type="button"
+            id="previousPhoto"
+            class="secondary-button"
+          >
+            ← Previous
+          </button>
+
+          <button
+            type="button"
+            id="nextPhoto"
+            class="secondary-button"
+          >
+            Next →
+          </button>
+
+        </div>
+
+        <button
+          type="button"
+          class="primary-button"
+          data-next="videoMemory"
+        >
+          One More Memory ♡
+        </button>
+
+      </div>
+    </section>
+
+    <!-- CHAPTER 6: VIDEO -->
+
+    <section id="videoMemory" class="scene">
+      <div class="scene-content">
+
+        <p class="eyebrow">CHAPTER FIVE</p>
+        <h2>A Moment Worth Keeping</h2>
+
+        <p class="romantic-text">
+          Some memories are too beautiful
+          to leave behind.
+          I wish I could relive every second with you.
+        </p>
+
+        <div class="video-frame">
+
+          <video
+            id="memoryVideo"
+            controls
+            playsinline
+            preload="metadata"
+          >
+            <source
+              src="assets/video_20261018_151324.mp4"
+              type="video/mp4"
+            >
+            Your browser does not support video playback.
+          </video>
+
+        </div>
+
+        <p class="romantic-text">
+          I hope we get to make
+          countless more memories like these.
+        </p>
+
+        <button
+          type="button"
+          class="primary-button"
+          data-next="letter"
+        >
+          I Wrote Something for You ♡
+        </button>
+
+      </div>
+    </section>
+
+    <!-- CHAPTER 7: LOVE LETTER -->
+
+    <section id="letter" class="scene">
+      <div class="scene-content">
+
+        <p class="eyebrow">A LETTER FROM MY HEART</p>
+
+        <h2>There Is Something I Want to Tell You</h2>
+
+        <p class="romantic-text">
+          Some feelings deserve more than
+          a simple message.
+        </p>
+
+        <button
+          type="button"
+          id="openLetter"
+          class="envelope-button"
+          aria-expanded="false"
+          aria-controls="letterContent"
+        >
+          <span class="envelope-icon" aria-hidden="true">
+            💌
+          </span>
+          Open Your Letter ♡
+        </button>
+
+        <article
+          id="letterContent"
+          class="letter-paper"
+          hidden
+        >
+
+          <h3>To My Beautiful Baby, ❤️</h3>
+
+          <p>Happy four months, my love.</p>
+
+          <p>
+            Four months ago, our story began,
+            and I never imagined how much happiness
+            one person could bring into my life.
+          </p>
+
+          <p>
+            Even with an entire country between us,
+            you became such an important part of my days.
+          </p>
+
+          <p>
+            I loved talking to you,
+            laughing with you,
+            and finding little ways to feel close
+            even when we were far apart.
+          </p>
+
+          <p>And then you came to Mexico.</p>
+
+          <p>
+            I still remember the moment
+            I finally held you in my arms.
+            It was something I had dreamed about
+            for so long, and suddenly it was real.
+          </p>
+
+          <p>
+            Those days together gave me memories
+            I will always treasure.
+            Not because everything had to be perfect,
+            but because I was sharing those moments
+            with you.
+          </p>
+
+          <p>
+            Now that we're apart again,
+            I miss being close to you.
+            I miss the hugs, the little moments,
+            and simply having you beside me.
+          </p>
+
+          <p>
+            I know that traveling to Canada
+            and seeing you again will take time.
+            I can't promise an exact date,
+            and I don't want to make promises
+            I can't yet keep.
+          </p>
+
+          <p>
+            But I want you to know
+            that seeing you again is something
+            I truly hope and want to work toward.
+          </p>
+
+          <p>
+            Thank you for these four months,
+            for the memories we've made,
+            and for being part of this story with me.
+          </p>
+
+          <p>
+            I hope this is only the beginning
+            of many more beautiful chapters together.
+          </p>
+
+          <p class="letter-signature">
+            Happy four months, my beautiful baby.
+            <br>
+            I love you more than words can express.
+            ❤️
+          </p>
+
+          <button
+            type="button"
+            class="primary-button"
+            data-next="ending"
+          >
+            One Last Thing ♡
+          </button>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CHAPTER 8: GRAND FINALE -->
+
+    <section id="ending" class="scene">
+      <div class="scene-content final-scene">
+
+        <p class="eyebrow">
+          FOUR MONTHS. ONE BEAUTIFUL STORY.
+        </p>
+
+        <div class="final-heart" aria-hidden="true">
+          ❤️
+        </div>
+
+        <h2>And Our Story Continues...</h2>
+
+        <p class="romantic-text">
+          My beautiful baby,
+          these four months have given me
+          memories I will carry in my heart forever.
+        </p>
+
+        <p class="romantic-text">
+          We have already crossed the distance once.
+          I still remember what it felt like
+          to finally hold you in my arms.
+        </p>
+
+        <p class="romantic-text">
+          I don't know exactly when
+          I'll be able to hold you again.
+          But I know that I want to keep building
+          this beautiful story with you,
+          one day at a time.
+        </p>
+
+        <div class="final-promise">
+
+          <span class="promise-butterfly" aria-hidden="true">
+            🦋
+          </span>
+
+          <p>
+            Until the day we meet again,
+            a part of my heart will always
+            be with you.
+          </p>
+
+          <span class="promise-butterfly" aria-hidden="true">
+            🦋
+          </span>
+
+        </div>
+
+        <h3 class="final-dedication">
+          Happy Four Months,
+          <br>
+          My Beautiful Baby.
+        </h3>
+
+        <p class="final-love">
+          I love you. Always. ♡
+        </p>
+
+        <button
+          type="button"
+          class="primary-button"
+          data-next="intro"
+        >
+          Relive Our Story ♡
+        </button>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
